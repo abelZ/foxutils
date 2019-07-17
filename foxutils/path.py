@@ -15,7 +15,7 @@ def listfiles(path, postfixs=[], recursive=True, needFolder=False):
                         filtered += listfiles(full_path, postfixs, recursive, needFolder)
             else:
                 if os.path.isfile(full_path):
-                    if postfixs and os.path.splitext(full_path)[-1] in postfixs:
+                    if not postfixs or os.path.splitext(full_path)[-1] in postfixs:
                         filtered.append(full_path)
                 else:
                     if recursive:
