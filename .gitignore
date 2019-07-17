@@ -1,0 +1,6 @@
+.coverage
+.pytest*
+*.pyc
+venv
+foxutils.egg-info
+build
