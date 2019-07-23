@@ -1,5 +1,11 @@
 import os
 
+
+# list files or folders under @path
+# @path the path to list
+# @postfixs the file post fixs filter, exp ['.mp4', '.ts']
+# @recursive if the list should execute recursive
+# @needFolder if the function should return files or folders
 def listfiles(path, postfixs=[], recursive=True, needFolder=False):
     filtered = []
     try:
